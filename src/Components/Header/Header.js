@@ -38,6 +38,7 @@ export default function Header() {
         <a className="flex items-center gap-x-1 pl-6" href="">
             <ArrowCircleRightIcon className="w-8 h-8 text-gold-100"/>
             <p className="text-gold-100 text-xl tracking-tightest">ثبت نام | ورود</p>
+            <h1 className="text-white w-6 h-6 bg-red-700">Hello world</h1>
         </a>
         </div>
         </div>
