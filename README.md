@@ -74,7 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-`javascript
+```javascript
 
 fucntion amir(){
     return(
@@ -83,4 +83,4 @@ fucntion amir(){
         </>
     )
 }
-`
+```
