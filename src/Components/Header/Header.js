@@ -71,7 +71,8 @@ export default function Header() {
                 </li>
                 <li>
                   <a onClick={DarkMode} className="py-3" href="#">
-                  <MoonIcon className="cursor-pointer w-8 h-8 text-gold-100  hover:text-purple-600 hover:border-b-2 hover:border-purple-60 border-purple-600 hover:rounded-lg" />
+                  <MoonIcon className="dark:inline-block hidden cursor-pointer w-8 h-8 text-gold-100 " />
+                  <SunIcon className="dark:hidden inline-block cursor-pointer w-8 h-8 text-gold-100 "/>
                   </a>
                 </li>
               </ul>
