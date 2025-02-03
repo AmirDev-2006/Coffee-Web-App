@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+    "./src/**/*.{js,jsx,ts,tsx}"],
+    darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -23,7 +23,7 @@ module.exports = {
         }
       },
       boxShadow:{
-        "Shodow-normal" : "0px 1px 10px rgba(0,0,0,0.05)"
+        "normal" : "0px 1px 10px rgba(0,0,0,0.05)"
       },
       borderRadius:{
         "4xl" : "2rem"
@@ -37,6 +37,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 }
 
