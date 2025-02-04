@@ -16,7 +16,7 @@ export default function Card(){
         <>
         {/* cart resours */}
         <li>
-        <div className="flex flex-col  w-[400px] left-0  top-12 p-5 border-t-[3px] rounded-2xl [&>*]:transition-colors  border-gold-100 r group-hover:opacity-100 group-hover:visible opacity-0 transition-all duration-500 invisible absolute bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white">
+        <div className="flex flex-col max-h-80 container-snap sm:overflow-y-scroll  w-[400px] left-0  top-12 p-5 border-t-[3px] rounded-2xl [&>*]:transition-colors  border-gold-100 r group-hover:opacity-100 group-hover:visible opacity-0 transition-all duration-500 invisible absolute bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white">
                     {/* cart header */}
                     <div className="flex justify-between w-[360px]">
                       <span className="text-gray-300 text-xs font-Dana">2 مورد</span>
@@ -28,6 +28,9 @@ export default function Card(){
                     {/* cart body */}
                    <Product picture={product6} price={180000} name="قهوه وارداتی از باکو همراه با 40% پودر شکلات" off={14500}/>
                    <Product picture={product4} price={160000} name="قهوه وارداتی از هند همراه با 40% پودر شکلات" off={25500}/>
+                   <Product picture={product4} price={160000} name="قهوه وارداتی از هند همراه با 40% پودر شکلات" off={25500}/>
+                   <Product picture={product4} price={160000} name="قهوه وارداتی از هند همراه با 40% پودر شکلات" off={25500}/>
+
 
                     {/* cart footer */}
                     <div className="flex justify-between mt-5">

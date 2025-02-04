@@ -29,6 +29,7 @@ module.exports = {
         "4xl" : "2rem"
       },
       fontFamily:{
+        "Yekan":"Yekan",
         "Dana":"Dana",
         "DanaDemiBold":"Dana DemiBold",
       },
