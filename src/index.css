@@ -5,10 +5,10 @@
 @layer base{
   @font-face {
     font-family: "Dana";
-    src: local('Dana'), url("../src/assets/fonts/Dana-Regular.ttf") format('truetype');
+    src: url("../src/assets/fonts/Dana-Regular.ttf") format('truetype');
   }
   @font-face {
     font-family: "Dana DemiBold";
-    src: local("Dana"), url("./assets/fonts/Dana-Bold.ttf") format('truetype');
+    src: url("./assets/fonts/Dana-Bold.ttf") format('truetype');
   }
 }
