@@ -16,6 +16,8 @@ import { useEffect, useRef, useState } from "react";
 export default function Mobilenav() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [menuOpen , setMenuOpen] = useState(false)
+  const [open , setOpen] = useState("-right-64")
+  const [toggle, setToggle] = useState(true);
   useEffect(() => {
     const root = window.document.documentElement;
     if (isDarkMode) {
@@ -24,6 +26,10 @@ export default function Mobilenav() {
       root.classList.remove("dark");
     }
   }, [isDarkMode]);
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
+
 
   return (
     <>
@@ -31,11 +37,11 @@ export default function Mobilenav() {
       <div className="bg-white dark:bg-zinc-700 px-4 h-16 flex items-center justify-between md:hidden w-full">
         <div>
           <a href="#">
-            <MenuIcon className=" dark:text-white w-6 h-6 text-zinc-700 open close" />
+            <MenuIcon onClick={handleClick} className=" dark:text-white w-6 h-6 text-zinc-700 open close" />
           </a>
         </div>
         {/* side bar menu */}
-        <div className="bg-white py-3 px-4 z-20 dark:bg-zinc-700 w-64 fixed top-0 right-0 min-h-screen">
+        <div style={{ right: toggle ? '-256px' : '0px' }}  className={`bg-white ${open} duration-500 py-3 px-4 z-20 dark:bg-zinc-700 w-64 fixed  top-0 -right-64 transition-all min-h-screen`}>
           {/* header responsive site */}
           <div className="flex py-3 items-center justify-between border-b-[1px] border-black-100/10 dark:border-white/10">
             <div className="flex px-3 gap-x-3.5 items-center justify-between">
@@ -44,12 +50,12 @@ export default function Mobilenav() {
             </div>
             <div className="px-2">
               <a  href="#">
-                <XIcon className={` w-5 h-5  text-zinc-600 dark:text-white`} />
+                <XIcon onClick={handleClick} className={` w-5 h-5  text-zinc-600 dark:text-white`} />
               </a>
             </div>
-            {/* body side bar menu */}
           </div>
-          <div className="p-2">
+            {/* body side bar menu */}
+          <div className="p-2 ">
             <ul className=" gap-y-2 border-b-[1px] pb-4 dark:border-white border-black/10 [&>*]:dark:text-white [&>*]:text-zinc-700 [&>*:hover]:text-orange-400 [&>*:hover]:bg-orange-100">
               <li className="flex items-center gap-x-1 w-full h-8 rounded-lg">
                 <HomeIcon className="w-4 h-4   " />
@@ -142,7 +148,7 @@ export default function Mobilenav() {
           </a>
         </div>
       </div>
-      <div className="overley bg-black-100/40 fixed inset-0 flex flex-col  w-full h-100 z-10 md:hidden"></div>
+      <div className="overley hidden bg-black-100/40 fixed inset-0  flex-col  w-full h-100 z-10 md:hidden"></div>
     </>
   );
 }
