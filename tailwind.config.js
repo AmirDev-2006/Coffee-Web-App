@@ -30,6 +30,7 @@ module.exports = {
       },
       fontFamily:{
         "Yekan":"Yekan",
+        "Yekan":"Yekan",
         "Dana":"Dana",
         "DanaDemiBold":"Dana DemiBold",
       },
