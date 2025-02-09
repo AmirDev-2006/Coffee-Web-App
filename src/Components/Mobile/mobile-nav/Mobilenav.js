@@ -56,7 +56,7 @@ export default function Mobilenav() {
   return (
     <>
       {/* header phone */}
-      <div className="bg-white dark:bg-zinc-700 px-4 h-16 flex items-center justify-between md:hidden w-full">
+      <div className="bg-white transition-colors duration-500 dark:bg-zinc-700 px-4 h-16 flex items-center justify-between md:hidden w-full">
         <div>
           <a href="#">
             <MenuIcon
@@ -87,7 +87,7 @@ export default function Mobilenav() {
           </div>
           {/* body side bar menu */}
           <div className="flex flex-col p-2 py-4 dark:text-white  ">
-            <ul>
+            <ul className="[&>*]:transition-colors">
               <li className="w-full h-8 hover:bg-gold-100 dark:hover:bg-orange-300 flex px-1 rounded-lg">
                 <button className="flex items-center gap-x-1">
                   <HomeIcon className="w-4 h-4"/>
